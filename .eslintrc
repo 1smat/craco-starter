@@ -1,0 +1,64 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint/eslint-plugin",
+    "react"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  "rules": {
+    "strict": [
+      "error",
+      "never"
+    ],
+    "default-case": "error",
+    "eqeqeq": "error",
+    "no-alert": "warn",
+    "no-eval": "error",
+    "no-floating-decimal": "error",
+    "no-lone-blocks": "error",
+    "no-multi-spaces": "error",
+    "no-new-func": "error",
+    "no-var": "error",
+    "no-param-reassign": "error",
+    "no-debugger": "warn",
+    "no-undef-init": "error",
+    "prefer-const": "off",
+    "brace-style": "warn",
+    "camelcase": "error",
+    "no-new-object": "error",
+    "no-unneeded-ternary": "error",
+    "no-unused-vars": "off",
+    "react/display-name": [
+      "off",
+      {
+        "ignoreTranspilerName": false
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": [
+      "off"
+    ],
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-unused-vars": "off"
+  },
+  "env": {
+    "browser": true
+  },
+  "ignorePatterns": [
+    "craco.config.js"
+  ]
+}

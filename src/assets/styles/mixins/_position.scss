@@ -1,0 +1,6 @@
+@mixin position-center($property: absolute) {
+	position: $property;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}

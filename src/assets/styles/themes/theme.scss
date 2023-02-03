@@ -1,0 +1,82 @@
+@import "./variables.scss";
+
+$themes: (
+	light: (
+		primary: #325ecd,
+		green: #8cc152,
+		red: #e9573f,
+		dark: #282f38,
+		secondary: #b6bccd,
+		error: #e9573f,
+		success: #6b8b48,
+		barChart: #407fdc,
+		theme-font-size: 14px,
+		RollingStone: #777b82,
+		EbonyClay: #282f38,
+		Akaroa: #d5b9a7,
+		AthensGray: #f6f6f7,
+		white: #ffffff,
+		CeruleanBlue: #325ecd,
+		Raven: #717c8c,
+		AthensGray200: #e6e9ed,
+		Iron: #d7d8da,
+		Heather: #b6bccd,
+		Mischka: #cdd1dd,
+		HawkesBlue: #e8f0fd,
+		Spindle: #b3c3ee,
+		Spindle200: #b2c3ee,
+		blackc: #000000,
+		Mantis: #8cc152,
+		whitec: #fff
+	),
+	dark: (
+		primary: #325ecd,
+		green: #8cc152,
+		red: #e9573f,
+		dark: #ffffff,
+		secondary: #b6bccd,
+		error: #e9573f,
+		success: #6b8b48,
+		barChart: #407fdc,
+		theme-font-size: 14px,
+		EbonyClay: #b5b8bd,
+		RollingStone: #777b82,
+		Akaroa: #d5b9a7,
+		AthensGray: #0b1528,
+		whitec: #010b1e,
+		CeruleanBlue: #325ecd,
+		Raven: #717c8c,
+		AthensGray200: #e6e9ed,
+		Iron: #0b1528,
+		Heather: #b6bccd,
+		Mischka: #cdd1dd,
+		HawkesBlue: #e8f0fd,
+		Spindle: #b3c3ee,
+		Spindle200: #b2c3ee,
+		blackc: #eee,
+		Mantis: #8cc152
+	)
+);
+
+@mixin themed() {
+	@each $theme, $map in $themes {
+		:global(.theme--#{$theme}) & {
+			$theme-map: () !global;
+			@each $key, $submap in $map {
+				$value: map-get(map-get($themes, $theme), "#{$key}");
+				$theme-map: map-merge(
+					$theme-map,
+					(
+						$key: $value
+					)
+				) !global;
+			}
+			@content;
+			$theme-map: null !global;
+		}
+	}
+}
+
+@function t($key) {
+	@return map-get($theme-map, $key);
+}

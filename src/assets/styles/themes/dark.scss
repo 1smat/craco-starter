@@ -1,0 +1,120 @@
+@import "assets/styles/variables.scss";
+
+div[class*="dark"] {
+	.ant-menu-sub {
+		background-color: #0b1528;
+	}
+	.ant-menu-submenu-title {
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+		border-radius: 10px !important;
+		border-bottom: none;
+		margin: 0 !important;
+		line-height: 10px !important;
+		padding-right: 10px;
+
+		&:last-child {
+			border-bottom: 0px;
+		}
+
+		&:hover {
+			background: #eee;
+
+			> i {
+				color: #000 !important;
+			}
+		}
+	}
+
+	.ant-menu-inline {
+		border-right: none;
+	}
+
+	.ant-menu-title-content {
+		a {
+			color: #bdbdbd;
+		}
+	}
+
+	.ant-menu-item-selected {
+		background-color: $DarkDark !important;
+	}
+	/* --------------------------------- SELECT --------------------------------- */
+	.ant-select-selection-placeholder {
+		color: $white !important;
+	}
+
+	.ant-select-selector {
+		background-color: $AthensGrayDark !important;
+	}
+
+	.ant-select-arrow {
+		color: $white;
+	}
+	.ant-select-dropdown {
+		background-color: $AthensGrayDark;
+	}
+
+	.select.ant-select-single .ant-select-selector .ant-select-selection-item {
+		color: $DarkText;
+	}
+
+	/* ---------------------------------- TABLE --------------------------------- */
+
+	thead {
+		background-color: #041331;
+	}
+	th.ant-table-cell {
+		background-color: #041331;
+		color: #fbfbfb;
+		border-bottom: none;
+	}
+
+	.ant-table-cell {
+		border-right: 1px solid #010b1e !important;
+	}
+	.ant-table-container {
+		border-left: none !important;
+	}
+
+	table {
+		border-top: none !important;
+	}
+
+	.ant-table {
+		border-radius: 10px;
+	}
+
+	td.ant-table-cell {
+		background-color: $AthensGrayDark;
+		border: 1px solid $DarkDark;
+		color: $white;
+	}
+
+	.ant-table-tbody > tr.ant-table-row:hover > td {
+		background: $DarkPrimaryHover;
+		cursor: pointer;
+	}
+
+	/* ---------------------------------- BADGE --------------------------------- */
+	.ant-badge-count {
+		background-color: $DarkDark;
+		border: none;
+		box-shadow: none;
+	}
+
+	/* -------------------------------- DROPDOWN -------------------------------- */
+
+	/* ------------------------------- PAGINATION ------------------------------- */
+	.ant-pagination {
+		& > li {
+			background-color: $AthensGrayDark;
+			border: 1px solid $DarkDark;
+		}
+	}
+
+	.ant-pagination .ant-pagination-prev.ant-pagination-disabled,
+	.ant-pagination .ant-pagination-next.ant-pagination-disabled {
+		background-color: $AthensGrayDark;
+	}
+}

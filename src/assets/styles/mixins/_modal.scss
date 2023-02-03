@@ -1,0 +1,48 @@
+@use "assets/styles/mixins/_flex.scss" as flex;
+
+@mixin icon-box {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+}
+
+@mixin footer {
+	@include flex.flex-both-center;
+	margin-top: 51px;
+
+	& > button {
+		min-width: 120px;
+		font-weight: 700;
+		font-size: 17px;
+		line-height: 21px;
+
+		&[class*="primary"] {
+			@include flex.flex-align-center;
+
+			span[class*="icon-left"] {
+				@include flex.flex-both-center;
+				margin-right: 10px;
+			}
+
+			span[class*="bg-has"] {
+				@include icon-box;
+				background-color: white;
+			}
+
+			span[class*="icon-right"] {
+				@include flex.flex-both-center;
+				margin-left: 10px;
+			}
+		}
+
+		// &:nth-of-type(1) {
+		// 	svg {
+		// 		margin-left: 5px;
+		// 	}
+		// }
+
+		&:nth-of-type(2) {
+			margin-left: 10px;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+  "printWidth": 140,
+  "tabWidth": 4,
+  "useTabs": false,
+  "semi": false,
+  "singleQuote": false,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": true,
+  "importOrder": [
+    "react",
+    "<THIRD_PARTY_MODULES>",
+    "antd/(.*)",
+    "store/(.*)$",
+    "context/(.*)$",
+    "types/(.*)$",
+    "utils/(.*)$",
+    "constants/(.*)$",
+    "services/(.*)$",
+    "hooks/(.*)$",
+    "containers/(.*)$",
+    "components/(.*)$",
+    "assets/(.*)$"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

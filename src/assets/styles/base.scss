@@ -1,0 +1,131 @@
+@use "assets/styles/mixins/_flex" as flex;
+@use "assets/styles/mixins/_modal" as modal;
+@import "fonts";
+@import "variables";
+@import "./themes";
+
+$spaceamounts: (
+	-5,
+	0,
+	3,
+	4,
+	5,
+	6,
+	7,
+	8,
+	10,
+	14,
+	15,
+	20,
+	25,
+	24,
+	30,
+	35,
+	40,
+	45,
+	50,
+	60,
+	70,
+	80,
+	90,
+	100,
+	130,
+	150,
+	160,
+	170,
+	200,
+	205,
+	-10,
+	-15,
+	-20,
+	-30
+); // pixel amounts.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+	@each $side in $sides {
+		.m#{str-slice($side, 0, 1)}-#{$space} {
+			margin-#{$side}: #{$space}px !important;
+		}
+
+		.p#{str-slice($side, 0, 1)}-#{$space} {
+			padding-#{$side}: #{$space}px !important;
+		}
+		.gap-#{$space} {
+			gap: #{$space}px;
+		}
+		.fz-#{$space} {
+			font-size: #{$space}px;
+		}
+	}
+}
+
+* {
+	box-sizing: border-box;
+	list-style-type: none;
+	outline: none;
+}
+
+html,
+body {
+	font-family: "Proxima Nova", sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	background: #f6f6f7;
+}
+
+body.dark__mode {
+	background-color: #333333;
+}
+
+#root {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+[role="tooltip"] {
+	z-index: 9999;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	line-height: normal;
+	margin-bottom: 0 !important;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: $primary;
+
+	&:hover {
+		color: $primary;
+		text-decoration: underline;
+	}
+}
+
+//--------------- Container -------------- //
+.container {
+	max-width: 1450px !important;
+	margin: 0 auto;
+	padding-inline: 14.5px;
+}
+
+//======== Nprogress Settings ========== //
+#nprogress .bar {
+	top: 100px;
+}

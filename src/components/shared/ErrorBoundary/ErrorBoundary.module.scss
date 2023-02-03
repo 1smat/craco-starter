@@ -1,0 +1,7 @@
+@use "assets/styles/mixins/_flex" as flex;
+
+.container {
+	height: 100%;
+	@include flex.flex-both-center;
+	flex-direction: column;
+}

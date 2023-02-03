@@ -1,0 +1,49 @@
+@mixin d-flex {
+	display: flex;
+}
+@mixin flex-justify-center {
+	@include d-flex;
+	justify-content: center;
+}
+
+@mixin flex-justify-around {
+	@include d-flex;
+	justify-content: space-around;
+}
+
+@mixin flex-justify-between {
+	@include d-flex;
+	justify-content: space-between;
+}
+
+@mixin flex-justify-end {
+	@include d-flex;
+	justify-content: flex-end;
+}
+
+@mixin flex-align-center {
+	@include d-flex;
+	align-items: center;
+}
+
+@mixin flex-both-center {
+	@include d-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex-justify-align {
+	@include d-flex;
+	align-items: center;
+}
+
+@mixin flex-between-center {
+	@include d-flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@mixin flex-direction-column {
+	@include d-flex;
+	flex-direction: column;
+}

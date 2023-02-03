@@ -1,0 +1,25 @@
+.sidebar-menu {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background: #f6f6f7;
+	border-radius: 10px;
+	padding: 10px 0;
+
+	&__item {
+		display: block;
+		width: 100%;
+		padding: 10px;
+		border-radius: 10px;
+		font-size: 16px;
+		padding-left: 23px;
+		color: #000;
+		transition: all 0.2s ease;
+		line-height: 24px;
+
+		&.active {
+			background: #5b7ed7;
+			color: #fff;
+		}
+	}
+}
